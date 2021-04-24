@@ -94,7 +94,7 @@ while Nodinho.state != goalpos:
     frontier.pop(0)
 
 
-#Going backwards from the node that arrived in the end and painting the path with '*'
+#Going backwards from the node that arrived the end and painting the path with '*'
 
 
 while Nodinho.state != firstpos:
