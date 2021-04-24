@@ -4,16 +4,12 @@ class Node:
         self.parent = parent
         self.action = action
 
-    def add(self):
-        self.parent = self
-
 #Maze
 Labirinto = [['#',' ',' ',' '],
              [' ',' ','X',' '],
              [' ','#','#',' '],
              [' ',' ',' ','#'],
              [' ',' ',' ','O']]
-
 
 #Finding X
 
@@ -28,7 +24,6 @@ for m in Labirinto:
 
         if n == 'X':
             firstpos = [m.index('X'),posy]
-
 
 #Finding O
 
@@ -79,7 +74,7 @@ while Nodinho.state != goalpos:
 
 
 
-
+    #defining next node, using the current node as parent and appending to the frontier
 
     for i in possibleactions:
         if i == 'up':
@@ -99,7 +94,7 @@ while Nodinho.state != goalpos:
     frontier.pop(0)
 
 
-
+#Going backwards from the node that arrived in the end and painting the path with '*'
 
 
 while Nodinho.state != firstpos:
